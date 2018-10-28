@@ -1,0 +1,27 @@
+<h1>Photo Details</h1>
+
+<div><%=@photo_caption%></div>
+
+<div>
+ <img src="<%=@photo_source%>" >
+</div>
+
+<div>
+  <%=@photo_ago%>
+</div>
+
+<nav>
+  <ul>
+    <li><a href="/photos">
+      Go back
+    </a></li>
+
+    <li><a href="<%="/photos/"+@the_id+"/edit"%>">
+      Edit
+    </a></li>
+
+    <li><a href="<%="/delete_photo/"+@the_id%>">
+      Delete
+    </a></li>
+  </ul>
+</nav>
