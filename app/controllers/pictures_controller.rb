@@ -13,7 +13,7 @@ class PicturesController < ApplicationController
     p.caption=params.fetch("user_caption")
     p.save
     
-    render("/create/create_photo_result.html.erb")
+    redirect_to("/photos")
   end
   
   #READ
@@ -65,7 +65,7 @@ class PicturesController < ApplicationController
     photo=Photo.find(the_id)
     photo.destroy
     
-    render("/delete/delete_result.html.erb")
+    redirect_to("/photos")
   end
 
 end

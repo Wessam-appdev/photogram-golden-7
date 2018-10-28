@@ -2,3 +2,24 @@
 
 <a href="/photos/new">Add a new photo</a>
 
+<% @photo_list.each do |pic| %>
+  <div>
+    <img src= "<%= pic.source %>" >
+  </div>
+  
+  <nav>
+    <ul>
+        <li><a href="<%= "/photos/" + pic.id.to_s %>">
+          Show Details
+        </a></li>
+
+        <li><a href="<%= "/photos/" + pic.id.to_s + "/edit" %>">
+          Edit
+        </a></li>
+
+        <li><a href="<%= "/delete_photo/" +pic.id.to_s %>">
+          Delete
+        </a></li>
+    </ul>
+  </nav>
+<% end %>
