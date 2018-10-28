@@ -7,6 +7,12 @@ class PicturesController < ApplicationController
   end
   
   def create_row
+    
+    p=Photo.new
+    p.source=params.fetch("user_url")
+    p.caption=params.fetch("user_caption")
+    p.save
+    
     render("/create/create_photo_result.html.erb")
   end
   
